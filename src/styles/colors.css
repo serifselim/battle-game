@@ -1,0 +1,29 @@
+/* Text Color */
+.t-green {
+  color: #24b500;
+}
+
+.t-orange {
+  color: #ff8412;
+}
+
+.t-red {
+  color: #be3333;
+}
+
+/* Background Color */
+.bg-gray {
+  background-color: #363636;
+}
+
+.bg-green {
+  background-color: #24b500;
+}
+
+.bg-red {
+  background-color: #be3333;
+}
+
+.bg-blue {
+  background-color: #1b91ff;
+}

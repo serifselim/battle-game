@@ -1,2 +1,10 @@
+/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+/* Base Css */
 @import './base.css';
+@import './colors.css';
+@import './typographys.css';
+
+/* Layout Css */
+@import './header.css';

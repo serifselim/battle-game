@@ -1,0 +1,48 @@
+/* Play CSS */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 50%;
+}
+
+/* Side CSS */
+
+.sides {
+  display: flex;
+}
+
+.side {
+  max-width: 20rem;
+}
+
+.side:first-child {
+  margin-right: 5rem;
+}
+
+.side:last-child {
+  margin-left: 5rem;
+}
+
+.side .side-bar {
+  height: 2rem;
+  border: 3px solid #000;
+  margin: 0.5rem 0;
+  border-radius: 0.6rem;
+}
+
+/* Action Button CSS */
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 3.5rem;
+}
+
+.actions-btn:hover {
+  opacity: 0.8;
+}

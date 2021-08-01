@@ -27,7 +27,12 @@
   margin-left: 5rem;
 }
 
-.side .side-bar {
+.side .side-bars {
+  display: flex;
+  flex-direction: column;
+}
+
+.side .side-bars .side-bar {
   height: 2rem;
   border: 3px solid #000;
   margin: 0.5rem 0;
@@ -39,7 +44,7 @@
 .actions {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 80%;
   margin-top: 3.5rem;
 }
 

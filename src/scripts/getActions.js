@@ -1,18 +1,7 @@
-const attack = (youData, enemyData) => {
-    youData.health--;
-}
-
-const magic = (youData, enemyData) => {
-    console.log("magic");
-}
-
-const health = (youData, enemyData) => {
-    console.log("health");
-}
-
-const sur = (youData, enemyData) => {
-    console.log("sur");
-}
+import attack from './attack';
+import magic from './magic';
+import health from './health';
+import sur from './sur';
 
 const getActions = (youData, enemyData) => {
     return {

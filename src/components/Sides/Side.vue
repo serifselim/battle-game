@@ -4,7 +4,7 @@
       class="name-title"
       :class="character.name === 'You' ? 't-green' : 't-red'"
     >
-      {{ character.name }}
+      {{ character.name }} {{ character.health }}
     </h4>
     <div class="side-bars">
       <div

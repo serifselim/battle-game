@@ -24,21 +24,32 @@ export default {
     const { attack, magic, health, sur } = getActions();
 
     const handleClick = (index) => {
-      switch (index) {
-        case 0:
-          attack(youData, enemyData);
-          break;
-        case 1:
-          magic();
-          break;
-        case 2:
-          health();
-          break;
-        case 3:
-          sur();
-          break;
-        default:
-          break;
+      if (youData.isYourTurn) {
+        switch (index) {
+          case 0:
+            attack(youData, enemyData);
+            break;
+          case 1:
+            if (youData.mana < 5) {
+              alert("Mana Needed !");
+            } else {
+              magic(youData, enemyData);
+            }
+            break;
+          case 2:
+            if (youData.mana < 5) {
+            } else {
+              health(youData, enemyData);
+            }
+            break;
+          case 3:
+            sur(youData, enemyData);
+            break;
+          default:
+            break;
+        }
+      } else {
+        console.log("saldıramazsın emmioğlu");
       }
     };
 

@@ -10,8 +10,12 @@
       <div
         class="side-bar"
         :class="character.name === 'You' ? 'bg-green' : 'bg-red'"
+        :style="'width :' + character.health + '%;'"
       />
-      <div class="side-bar bg-blue" />
+      <div
+        class="side-bar bg-blue"
+        :style="'width :' + character.mana + '%;'"
+      />
     </div>
     <img :src="character.img" height="200" />
   </div>

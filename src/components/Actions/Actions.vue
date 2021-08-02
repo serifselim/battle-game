@@ -50,8 +50,6 @@ export default {
           default:
             break;
         }
-      } else {
-        console.log("saldıramazsın emmioğlu");
       }
     };
 

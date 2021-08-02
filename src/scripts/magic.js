@@ -1,7 +1,7 @@
 import enemyAction from './enemyAction';
 
 const magic = (youData, enemyData) => {
-    let rndm = Math.floor(Math.random() * 10 + 5);
+    let rndm = Math.floor(Math.random() * 15 + 5);
 
     enemyData.health -= rndm * 2;
     youData.mana -= rndm * 3;

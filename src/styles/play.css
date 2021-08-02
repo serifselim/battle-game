@@ -98,6 +98,7 @@
   border-radius: 1rem;
   border: none;
   color: white;
+  font-family: 'Rowdies', cursive;
 }
 
 .result .result-box button:hover {

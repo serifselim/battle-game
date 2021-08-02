@@ -1,4 +1,4 @@
-const sur = (youData, enemyData) => {
+const sur = (youData) => {
     youData.health = 0;
     youData.mana = 0;
 }

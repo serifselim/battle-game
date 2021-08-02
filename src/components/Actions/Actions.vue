@@ -45,7 +45,7 @@ export default {
             }
             break;
           case 3:
-            sur(youData, enemyData);
+            sur(youData);
             break;
           default:
             break;

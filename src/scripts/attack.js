@@ -7,7 +7,6 @@ const attack = (youData, enemyData) => {
 
     setTimeout(() => {
         enemyAction(youData, enemyData);
-        youData.isYourTurn = true;
     }, 1000);
 }
 

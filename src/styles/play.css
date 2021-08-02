@@ -30,13 +30,19 @@
 .side .side-bars {
   display: flex;
   flex-direction: column;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .side .side-bars .side-bar {
   height: 2rem;
   border: 3px solid #000;
   margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.6rem;
+  transition: all 0.5s;
 }
 
 /* Action Button CSS */
@@ -48,6 +54,52 @@
   margin-top: 3.5rem;
 }
 
+.actions-btn {
+  transition: all 0.4s;
+}
+
 .actions-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Result Screen CSS */
+
+.result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.result .result-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  box-shadow: 7px 8px 21px -3px rgba(0, 0, 0, 0.66);
+}
+
+.result .result-box h2 {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+.result .result-box button {
+  font-size: 3rem;
+  padding: 0.7rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+}
+
+.result .result-box button:hover {
   opacity: 0.8;
 }

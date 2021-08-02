@@ -7,6 +7,10 @@
   color: #ff8412;
 }
 
+.t-gray {
+  color: #363636;
+}
+
 .t-red {
   color: #be3333;
 }
@@ -14,6 +18,10 @@
 /* Background Color */
 .bg-gray {
   background-color: #363636;
+}
+
+.bg-orange {
+  background-color: #ff8412;
 }
 
 .bg-green {

@@ -5,3 +5,9 @@
 .name-title {
   font-size: 2rem;
 }
+
+.turn-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+}

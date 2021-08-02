@@ -38,6 +38,8 @@ export default {
             break;
           case 2:
             if (youData.mana < 5) {
+              alert("Mana Needed !");
+              youData.isYourTurn = true;
             } else {
               health(youData, enemyData);
             }

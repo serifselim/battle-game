@@ -6,11 +6,8 @@ const health = (youData, enemyData) => {
 
     youData.health += healthValue;
     youData.mana -= manaValue;
-    youData.isYourTurn = false;
 
-    setTimeout(() => {
-        enemyAction(youData, enemyData);
-    }, 1000);
+    enemyAction(youData, enemyData);
 }
 
 export default health;

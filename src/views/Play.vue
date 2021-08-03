@@ -13,8 +13,6 @@
     </div>
   </div>
   <div class="container" v-else>
-    <h4 class="turn-title t-green" v-if="youData.isYourTurn">Your Turn</h4>
-    <h4 class="turn-title t-red" v-else>Enemy's Turn</h4>
     <Sides :youData="youData" :enemyData="enemyData" />
     <Actions :youData="youData" :enemyData="enemyData" />
   </div>
@@ -33,7 +31,6 @@ export default {
       health: 100,
       mana: 100,
       img: youImg,
-      isYourTurn: true,
     });
     const enemyData = ref({
       name: "Enemy",
@@ -48,26 +45,26 @@ export default {
     });
 
     watch(youData.value, () => {
-      if (youData.value.health <= 0) {
-        gameResult.value.winner = "You Lost";
-        gameResult.value.isEnd = true;
-      } else if (youData.value.health > 100) {
-        youData.value.health = 100;
-      }
-
-      if (youData.value.mana <= 0) {
-        youData.value.mana = 0;
-      }
+      watchData(youData.value, "Lost");
     });
 
-    watch(enemyData.value, () => {
-      if (enemyData.value.health <= 0) {
-        gameResult.value.winner = "You Win";
-        gameResult.value.isEnd = true;
-      } else if (enemyData.value.health > 100) {
-        enemyData.value.health = 100;
-      }
+    watch(enemyData.value, (oldValue, newValue) => {
+      console.log(oldValue.health);
+      console.log(newValue.health);
+      watchData(enemyData.value, "Win");
     });
+
+    const watchData = (data, winner) => {
+      if (data.health <= 0) {
+        gameResult.value.winner = `You ${winner}`;
+        gameResult.value.isEnd = true;
+      } else if (data.health > 100) {
+        data.health = 100;
+      }
+      if (data.mana <= 0) {
+        data.mana = 0;
+      }
+    };
 
     const reset = () => {
       youData.value.health = 100;

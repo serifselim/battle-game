@@ -18,11 +18,7 @@
         <span>%{{ character.mana }}</span>
       </div>
     </div>
-    <img
-      :class="character.name === 'You' ? 'right-attack' : 'left-attack'"
-      :src="character.img"
-      height="200"
-    />
+    <img :src="character.img" height="200" />
   </div>
 </template>
 

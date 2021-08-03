@@ -24,32 +24,29 @@ export default {
     const { attack, magic, health, sur } = getActions();
 
     const handleClick = (index) => {
-      if (youData.isYourTurn) {
-        switch (index) {
-          case 0:
-            attack(youData, enemyData);
-            break;
-          case 1:
-            if (youData.mana < 5) {
-              alert("Mana Needed !");
-            } else {
-              magic(youData, enemyData);
-            }
-            break;
-          case 2:
-            if (youData.mana < 5) {
-              alert("Mana Needed !");
-              youData.isYourTurn = true;
-            } else {
-              health(youData, enemyData);
-            }
-            break;
-          case 3:
-            sur(youData);
-            break;
-          default:
-            break;
-        }
+      switch (index) {
+        case 0:
+          attack(youData, enemyData);
+          break;
+        case 1:
+          if (youData.mana < 5) {
+            alert("Mana Needed !");
+          } else {
+            magic(youData, enemyData);
+          }
+          break;
+        case 2:
+          if (youData.mana < 5) {
+            alert("Mana Needed !");
+          } else {
+            health(youData, enemyData);
+          }
+          break;
+        case 3:
+          sur(youData);
+          break;
+        default:
+          break;
       }
     };
 
